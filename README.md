@@ -1,2 +1,2 @@
 # DS_ALGO
-Datastructures_algo
+# Problem solving of Data structures and algorithms
