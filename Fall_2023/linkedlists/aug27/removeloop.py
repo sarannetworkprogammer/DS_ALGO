@@ -62,10 +62,6 @@ print(f"after break slow.val = {slow.val}")
 cnt =0
 while True:
 
-    cnt = cnt +1
-    if cnt ==10:
-       break
-
     if slow.next == fast.next:
        print(f"in_loop_slow ={slow.val}")
        print(f"in_loop_fast = {fast.val}")

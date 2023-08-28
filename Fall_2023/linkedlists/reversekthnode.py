@@ -4,7 +4,9 @@ class ListNode:
         self.next = None
 
 
-dummy = ListNode()
+
+
+
 
 l1 = ListNode(1)
 l2 = ListNode(2)
@@ -29,7 +31,6 @@ def print_linkedlist(head):
 print(f"Printing the linkedlist")
 print_linkedlist(head)
 
+dummy = ListNode(0,head)
 
-def reversekgroup(head, k):
-
-    groupprev
+groupprev = dummy
