@@ -22,7 +22,7 @@ print(f"q_len ={len(q)}")
 
 count_level = 0
 
-while q:
+while q
     q_len = len(q)
     level =[]
 
