@@ -8,6 +8,9 @@ ans =[0]*n
 ans[n-1] = -1
 stack.append(A[n-1])
 
+print(f"initial_stack={stack}")
+print(f"initia_ans =")
+
 
 for i in range(n-2,-1):
 
