@@ -21,10 +21,11 @@ class Trie:
                 current.children.update({ch:node})
 
             current = node
-
         current.endofstring = True
         print("sucessfuly inserted")
 
 
 newTrie = Trie()
+
+print(f"new_trie_object ={newTrie}, newTrie.children={newTrie.children}")
 newTrie.insertstring("App")
