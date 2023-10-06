@@ -30,6 +30,46 @@ def levelordertraversal(rootNode):
             print(rootNode.customList[i])
 
 
+def heapifyTreeInsert(rootNode,index,heapType):
+
+    parentIndex = int(index/2)
+
+    if index <=1:
+        return
+    
+    if heapType == "Min":
+    
+        if rootNode.customList[index] < rootNode.customList[parentIndex]:
+            temp = rootNode.customList[index]
+            rootNode.customList[index] = rootNode.customList[parentIndex]
+            rootNode.customList[parentIndex] = temp
+
+        heapifyTreeInsert(rootNode,parentIndex,heapType)
+
+    elif heapType == "Max":
+        if rootNode.customList[index] > rootNode.customList[parentIndex]:
+            temp = rootNode.customList[index]
+            rootNode.customList[index] = rootNode.customList[parentIndex]
+            rootNode.customList[parentIndex] = temp
+
+        heapifyTreeInsert(rootNode,parentIndex,heapType)
+
+
+def insertnode(rootnode,nodevalue, heaptype):
+
+    if rootnode.heapsize + 1 == rootnode.maxsize:
+        return "The Binary Heap is full"
+    
+    rootnode.customlist[rootnode.heapsize+1] = nodevalue
+    rootnode.heapsize +=1
+    heapifyTreeInsert(rootNode,rootNode.heapsize,heaptype)
+    return "The value has been successfully inserted"
+
+
+
+
+
+
 
 
 newBinaryHeap = Heap(5)
