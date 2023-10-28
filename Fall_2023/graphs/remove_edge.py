@@ -33,9 +33,12 @@ class Graph:
 
         if vertex1 in self.adjacency_list.keys() and vertex2 in self.adjacency_list.keys():
 
-            self.adjacency_list[vertex1].remove(vertex2)
-            self.adjacency_list[vertex2].remove(vertex1)
+            try:
 
+                self.adjacency_list[vertex1].remove(vertex2)
+                self.adjacency_list[vertex2].remove(vertex1)
+            except ValueError:
+                pass
             return True 
 
         return False
@@ -46,6 +49,7 @@ my_graph = Graph()
 my_graph.add_vertex("A")
 my_graph.add_vertex("B")
 my_graph.add_vertex("C")
+my_graph.add_vertex("D")
 
 my_graph.add_edge("A","B")
 my_graph.add_edge("A","C")
@@ -54,7 +58,7 @@ my_graph.print_graph()
 
 
 
-my_graph.remove_edge("A", "C")
+my_graph.remove_edge("A", "D")
 
 print("after removing edge")
 my_graph.print_graph()
