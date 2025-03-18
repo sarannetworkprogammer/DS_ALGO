@@ -1,10 +1,13 @@
 def fact(n):
-
     if n == 1:
         return 1
-
     return( n*fact(n-1))
 
-ans = fact(3)
 
-print(f"ans ={ans}")
+def main():
+
+    ans = fact(3)
+    print(f"ans ={ans}")
+
+
+main()
