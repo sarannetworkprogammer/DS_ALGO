@@ -9,5 +9,4 @@ def main():
     ans = fact(3)
     print(f"ans ={ans}")
 
-
 main()
